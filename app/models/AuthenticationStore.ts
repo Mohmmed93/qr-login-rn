@@ -36,7 +36,6 @@ export const AuthenticationStoreModel = types
   }))
   .actions((store) => ({
     setScannedData(value?: string) {
-      console.log("value", value)
       if (value === undefined) { 
         store.authUserName = ""
         store.authEmail = ""
@@ -63,6 +62,11 @@ export const AuthenticationStoreModel = types
     },
     setAuthUsername(value: string) {
       store.authUserName = value.replace(/ /g, "")
+    },
+  }))
+  .views((self) => ({
+    get getUserDetails() {
+      return `logged in as ${self.authUserName} \nEmail: ${self.authEmail}` 
     },
   }))
 

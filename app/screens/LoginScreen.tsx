@@ -17,7 +17,6 @@ export const LoginScreen = observer(function LoginScreen(_props: LoginScreenProp
   const {
     authenticationStore: {
       authEmail,
-      setAuthEmail,
       setAuthPassword,
       setAuthToken,
       setScannedData,
@@ -39,7 +38,6 @@ export const LoginScreen = observer(function LoginScreen(_props: LoginScreenProp
 
   useEffect(() => {
     return () => {
-      setAuthEmail("")
       setAuthPassword("")
       setScannedData("")
     }
@@ -48,7 +46,6 @@ export const LoginScreen = observer(function LoginScreen(_props: LoginScreenProp
   useEffect(() => {
     if (Object.values(validationErrors).some((v) => !!v)) {
       scanned && Alert.alert("Error", stringify(errors))
-      console.log('errors', errors)
       return 
     }
     // Mock Token

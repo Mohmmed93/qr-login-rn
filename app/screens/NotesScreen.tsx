@@ -27,7 +27,7 @@ export const NotesScreen = observer(function WelcomeScreen(
   const query = useQuery(Note)
   const realm = useRealm()
   const {
-    authenticationStore: { setAuthToken },
+    authenticationStore: { setAuthToken, getUserDetails },
   } = useStores()
   
   const logout = useCallback(
@@ -72,6 +72,7 @@ export const NotesScreen = observer(function WelcomeScreen(
       contentContainerStyle={$screenContentContainer}
     >
       <Text tx="loginScreen.enterDetails" preset="subheading" style={$enterDetails} />
+      <Text text={getUserDetails} preset="default" style={$enterDetails} />
       
       <TextField
         value={newNote}
