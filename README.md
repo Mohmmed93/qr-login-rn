@@ -21,4 +21,8 @@ username
 email  
 password  
 
+## Working QR Image
+
+![alt|250](readme-res/success_qrcode.png)
+
 All of information must be in the new line.
