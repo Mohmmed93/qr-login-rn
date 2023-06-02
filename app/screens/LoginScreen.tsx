@@ -50,11 +50,11 @@ export const LoginScreen = observer(function LoginScreen(_props: LoginScreenProp
     }
     // Mock Token
     setAuthToken(String(Date.now()))
-  }, [authEmail])
+  }, [scanned, authEmail])
 
   async function handleBarCodeScanned({ data }) {
-    setScanned(true)
     setScannedData(data)
+    setScanned(true)
   }
 
   return (

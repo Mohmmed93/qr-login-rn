@@ -45,7 +45,7 @@
     "date-fns": "^2.29.2",
     "expo": "~46.0.3",
     "expo-application": "~4.2.2",
-    "expo-barcode-scanner": "11.3.0",
+    "expo-barcode-scanner": "11.5.0",
     "expo-camera": "~12.5.0",
     "expo-constants": "~13.2.3",
     "expo-device": "~4.3.0",
